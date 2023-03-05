@@ -1,0 +1,152 @@
+<html>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_p }}
+           
+            
+    
+            <form>
+              
+                <button type="submit" value="=" name="submit_button" class="equals">=</button>
+                <button type="button" value="0" onclick="displayValue('0')" class="zero">0</button>
+                <button type="button" value="1" onclick="displayValue('1')" class="one">1</button>
+                <button type="button" value="2" onclick="displayValue('2')" class="two">2</button>
+                <button type="button" value="3" onclick="displayValue('3')" class="three">3</button>
+                <button type="button" value="4" onclick="displayValue('4')" class="four">4</button>
+                <button type="button" value="5" onclick="displayValue('5')" class="five">5</button>
+                <button type="button" value="6" onclick="displayValue('6')" class="six">6</button>
+                <button type="button" value="7" onclick="displayValue('7')" class="seven">7</button>
+                <button type="button" value="8" onclick="displayValue('8')" class="eight">8</button>
+                <button type="button" value="9" onclick="displayValue('9')" class="nine">9</button>
+                <button type="button" value="+" onclick="displayValue('+')" class="plus">+</button>
+                <button type="button" value="-" onclick="displayValue('-')" class="minus">-</button>
+                <button type="button" value="*" onclick="displayValue('*')" class="multiply">*</button>
+                <button type="button" value="/" onclick="displayValue('/')" class="divide">/</button>
+                <button type="reset" value="~"  class="reset">~</button>
+            </form>
+    <style>
+        *{
+    box-sizing: content-box;
+}
+
+body{
+    padding: 2rem;
+}
+
+form{
+    height: 7rem;
+    width: 5rem;
+    display: flexbox;
+}
+form button{
+    padding: 2rem;
+    border-radius: 2rem;
+    border: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -2rem;
+    transform: translateX(-50%), translateY(-50%);
+    cursor: pointer;
+}
+
+.zero{
+    left: 40%;
+    top: 65%;
+}
+.one{
+    left: 35%;
+    top: 50%;
+}
+.two{
+    left: 40%;
+    top: 50%;
+}
+.three{
+    left: 45%;
+    top: 50%;
+}
+.four{
+    left: 35%;
+    top: 35%;
+}
+.five{
+    left: 40%;
+    top: 35%;
+}
+.six{
+    left: 45%;
+    top: 35%;
+}
+.seven{
+    left: 35%;
+    top: 20%;
+}
+.eight{
+    left: 40%;
+    top: 20%;
+}
+.nine{
+    left: 45%;
+    top: 20%;
+}
+.plus{
+    left: 35%;
+    top: 65%;
+}
+
+.minus{
+    left: 45%;
+    top: 65%;
+}
+
+.multiply{
+    left: 50%;
+    top: 20%;
+}
+
+.divide{
+    left: 50%;
+    top: 35%;
+}
+
+.reset{
+    left: 50%;
+    top: 50%;
+}
+
+.equals{
+    left: 50%;
+    top: 65%;
+}
+
+#textfield{
+    resize: none;
+    height: 8rem;
+    width: 20rem;
+    color: crimson;
+    font-size: xx-large;
+    background-color: lightblue;
+    left: 50%;
+    top: 75%;
+    position: absolute;
+    border-radius: 5px;
+    transform: translateX(-83%);
+}
+    </style>
+            
+            
+        </table>
+        <script>
+            function displayValue(value) {
+              document.getElementById('id_expression').value += value;
+            }
+          </script>
+
+
+</body>
+
+
+<html>
